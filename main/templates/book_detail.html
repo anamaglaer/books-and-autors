@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p> {{ book.name }}</p>
+<div class="card_book_img" style="width:100px; height:150px;">
+        <img src="{{book.image.url}}" style="max-width:100%; max-height:100%;">
+        </div>
+<p> {{ book.short_description }}</p>
+<p> Комментарий(Комментарии): </p>
+{% for i in book.review_set.all%}
+<p> {{ i.review }}</p>
+{% endfor %}
+<div>
+    <a href="{% url 'main' %}" style="padding:5px; background:grey; border-radius:5px; text-decoration:none;">
+        На главную
+
+    </a>
+        </div>
+</body>
+</html>
