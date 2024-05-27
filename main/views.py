@@ -40,11 +40,11 @@ def book_page(request, id):
     return render(request, 'book.html', context)
 
 
-def get_book_detail_page(request, book_id):
-    book = Book.objects.get(id=book_id)
-    print(book)
-
-    context = {
-        'book': book
-    }
-    return render(request, 'book_detail.html', context)
+# def get_book_detail_page(request, book_id):
+#     book = Book.objects.get(id=book_id)
+#     print(book)
+#
+#     context = {
+#         'book': book
+#     }
+#     return render(request, 'book_detail.html', context)
