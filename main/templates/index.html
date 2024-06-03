@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!--<form action="" method="POST">-->
+<!--    {% csrf_token  %}-->
+<!--    <input type="text" name="name" placeholder="Имя">-->
+<!--    <input type="text" name="lastname" placeholder="Фамилия">-->
+<!--    <input type="text" name="age" placeholder="Возраст">-->
+
+
+
+<!--    <button>Отправить</button>-->
+<!--    -->
+<!--</form>-->
+<div class="review">
+{% for rev in review %}
+{{rev.review}}
+{% endfor %}
+    </div>
+
+<div style="max-width:400px">
+
+<form action="" method="POST" style="display:flex; flex-direction:column; gap:10px">
+{% csrf_token %}
+<textarea name="review" rows="10" cols="40"> </textarea>
+    <select name="book" id="">
+        {% for b in book %}
+        <option value="{{ b.id }}"> {{ b.name }}
+        </option>
+        {% endfor %}
+    </select>
+<button> Отправить </button>
+</form>
+    </div>
+</body>
+</html>

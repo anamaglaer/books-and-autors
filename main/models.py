@@ -9,7 +9,6 @@ class Autors(models.Model):
     foto = models.ImageField()
 
     def __str__(self):
-        #  return self.famile
         return f'{self.name} {self.famile}'
 
 class Book(models.Model):
@@ -31,3 +30,5 @@ class Review(models.Model):
 
     def __str__(self):
         return f'{self.id} {self.book}'
+
+
